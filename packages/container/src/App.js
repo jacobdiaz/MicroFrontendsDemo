@@ -1,7 +1,7 @@
 import React from "react";
 import { MarketingApp } from "./components/MarketingApp";
 
-// ! TEST CI CD
+// ! TEST CI CD 2
 export default () => {
   return (
     <>
