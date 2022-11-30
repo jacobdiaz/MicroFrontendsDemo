@@ -9,6 +9,7 @@ const productionConfig = {
   mode: "production",
   output: {
     filename: "[name].[contenthash].js", // when we build files, use this as a template on how to name (used for cacheing)
+    publicPath: "/container/latest/", // Used anytime you have some part of webPack that is refering to a file that is built by webpack
   },
   plugins: [
     new ModuleFederationPlugin({
