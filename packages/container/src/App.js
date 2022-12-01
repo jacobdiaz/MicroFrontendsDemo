@@ -14,7 +14,7 @@ export default () => {
         }}
       >
         <nav>
-          <p>navBar</p>
+          <p>navBar!</p>
         </nav>
         <hr />
       </div>
