@@ -16,7 +16,7 @@ const productionConfig = {
       name: "containerHost",
       remotes: {
         // Points to production domains!
-        marketing: `marketing@${domain}/marketing/remoteEntry.js`, // TODO: NO AWS DOMAIN RIGHT NOW
+        marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`, // TODO: NO AWS DOMAIN RIGHT NOW
       },
       shared: packageJson.dependencies,
     }),
