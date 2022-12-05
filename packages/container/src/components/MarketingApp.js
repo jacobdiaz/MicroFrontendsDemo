@@ -1,6 +1,6 @@
-import {mount} from "marketing/MarketingApp";
-import React, {useEffect, useRef} from "react";
-import {useHistory} from "react-router-dom";
+import { mount } from "marketing/MarketingApp";
+import React, { useEffect, useRef } from "react";
+import { useHistory } from "react-router-dom";
 
 export const MarketingApp = () => {
   const ref = useRef(null); // Create a reference to the div we are inserting

@@ -1,11 +1,11 @@
-import {createBrowserHistory, createMemoryHistory} from "history";
+import { createBrowserHistory, createMemoryHistory } from "history";
 import React from "react";
 import ReactDOM from "react-dom";
 
 import App from "./App";
 
 // ! MOUNT GETS CALLED FROM CONTAINER
-const mount = (el, {onNavigate, defaultHistory, initialPath}) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   const history =
     defaultHistory ||
     createMemoryHistory({
