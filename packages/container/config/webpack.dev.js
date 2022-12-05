@@ -33,4 +33,4 @@ const devConfig = {
   ],
 };
 
-module.exports = merge(commonConfig, devConfig); //Merge these two files (Dev config)
+module.exports = merge(commonConfig, devConfig); // Merge these two files (Dev config)
