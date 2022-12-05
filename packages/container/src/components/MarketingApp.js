@@ -9,6 +9,8 @@ export const MarketingApp = () => {
   // When component loads mount our Marketing App into this div!
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
+      initialPath: history.location.pathname,
+
       // When onNavigate gets called memory history  passes location into it
       onNavigate: ({ pathname: nextPathname }) => {
         const { pathname } = history.location;

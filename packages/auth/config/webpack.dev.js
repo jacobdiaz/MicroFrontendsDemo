@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const commonConfig = require("./webpack.common");
 const packageJson = require("../package.json");
 
-const PORT = 8081;
+const PORT = 8083;
 const devConfig = {
   mode: "development",
   output: {
@@ -21,10 +21,10 @@ const devConfig = {
       template: "./public/index.html",
     }),
     new ModuleFederationPlugin({
-      name: "marketing", // Loads a global project variable called marketing
+      name: "auth", // Loads a global project variable called auth
       filename: "remoteEntry.js",
       exposes: {
-        "./MarketingApp": "./src/bootstrap", // When someone asks for @marketing/Marketing give them bootstrap.js
+        "./AuthApp": "./src/bootstrap", // When someone asks for @auth/AuthApp give them bootstrap.js
       },
       shared: packageJson.dependencies,
     }),
