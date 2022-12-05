@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-import React, { lazy, Suspense } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-=======
 import { createGenerateClassName, StylesProvider } from "@material-ui/styles";
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { AuthApp } from "./components/AuthApp";
->>>>>>> a77bc2f57c7706411aad56bd9af59a2c5caa45ab
 import Header from "./components/Header";
 import { MarketingApp } from "./components/MarketingApp";
 
@@ -29,15 +24,8 @@ export default () => {
         <div>
           <Header />
           <Switch>
-<<<<<<< HEAD
-            <Suspense fallback={<Loading />}>
-              <Route path='/auth' component={AuthLazy} />
-              <Route path='/' component={MarketingLazy} />
-            </Suspense>
-=======
-            <Route path="/auth" component={AuthApp} />
-            <Route path="/" component={MarketingApp} />{" "}
->>>>>>> a77bc2f57c7706411aad56bd9af59a2c5caa45ab
+            <Route path='/auth' component={AuthApp} />
+            <Route path='/' component={MarketingApp} />{" "}
           </Switch>
         </div>
       </StylesProvider>
