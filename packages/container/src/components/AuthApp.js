@@ -2,7 +2,7 @@ import { mount } from "auth/AuthApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-export const AuthApp = () => {
+export default () => {
   const ref = useRef(null);
   const history = useHistory();
 

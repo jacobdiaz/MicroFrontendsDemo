@@ -3,8 +3,12 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { createMemoryHistory, createBrowserHistory } from "history";
 
-const mount = (el, { onNavigate, defaultHistory }) => {
-  const history = defaultHistory || createMemoryHistory(); // If we provide a default History use it else create a memory history
+const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+  const history =
+    defaultHistory ||
+    createMemoryHistory({
+      initialEntries: [initialPath],
+    }); // If we provide a default History use it else create a memory history
 
   if (onNavigate) {
     // if we get passed a onNav, when ever memory history (url path) changes, call onNavigate

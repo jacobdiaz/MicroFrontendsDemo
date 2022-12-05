@@ -2,7 +2,7 @@ import { mount } from "marketing/MarketingApp";
 import React, { useRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-export const MarketingApp = () => {
+export default () => {
   const ref = useRef(null); // Create a reference to the div we are inserting
   const history = useHistory(); // Create a copy of containers browser history object
 
