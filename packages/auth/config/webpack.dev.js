@@ -1,12 +1,10 @@
 const { merge } = require("webpack-merge");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
-
 const commonConfig = require("./webpack.common");
 const packageJson = require("../package.json");
 
-const PORT = 8082;
-
+const PORT = 8083;
 const devConfig = {
   mode: "development",
   output: {
@@ -23,10 +21,11 @@ const devConfig = {
       template: "./public/index.html",
     }),
     new ModuleFederationPlugin({
-      name: "containerHost",
-      remotes: {
-        marketing: "marketing@http://localhost:8081/remoteEntry.js",
-        auth: "auth@http://localhost:8083/remoteEntry.js",
+      name: "auth", // Loads a global project variable called auth
+      filename: "remoteEntry.js",
+      exposes: {
+        "./AuthApp": "./src/bootstrap", // When someone asks for @auth/AuthApp
+        // give them bootstrap.js
       },
       shared: packageJson.dependencies,
     }),
