@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 // ! MOUNT GETS CALLED FROM CONTAINER
-const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
+const mount = (el, { onNavigate, defaultHistory, initialPath, onSignIn }) => {
   const history =
     defaultHistory ||
     createMemoryHistory({
@@ -15,7 +15,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   if (onNavigate) {
     history.listen(onNavigate);
   }
-  ReactDOM.render(<App history={history} />, el);
+  ReactDOM.render(<App history={history} onSignIn={onSignIn} />, el);
 
   return {
     onParentNavigate({ pathname: nextPathname }) {
