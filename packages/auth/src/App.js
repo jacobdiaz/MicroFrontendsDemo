@@ -1,6 +1,7 @@
+import { createGenerateClassName, StylesProvider } from "@material-ui/styles";
 import React from "react";
-import { Switch, Route, Router } from "react-router-dom";
-import { StylesProvider, createGenerateClassName } from "@material-ui/styles";
+import { Route, Router, Switch } from "react-router-dom";
+
 import SignIn from "./components/SignIn";
 import SignUp from "./components/Signup";
 
@@ -15,8 +16,12 @@ export default ({ history }) => {
       <StylesProvider generateClassName={generateClassName}>
         <Router history={history}>
           <Switch>
-            <Route path='/auth/signin' component={SignIn} />
-            <Route path='/auth/signup' component={SignUp} />
+            <Route path="/auth/signin" component={SignIn} />
+            <Route
+              path="/auth /
+      signup"
+              component={SignUp}
+            />{" "}
           </Switch>
         </Router>
       </StylesProvider>
