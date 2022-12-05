@@ -10,7 +10,7 @@ const PORT = 8082;
 const devConfig = {
   mode: "development",
   output: {
-    publicPath: `http://localhost:${PORT}/`,
+    publicPath: "http://localhost:8082/",
   },
   devServer: {
     port: PORT,

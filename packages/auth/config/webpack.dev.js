@@ -24,8 +24,7 @@ const devConfig = {
       name: "auth", // Loads a global project variable called auth
       filename: "remoteEntry.js",
       exposes: {
-        "./AuthApp": "./src/bootstrap", // When someone asks for @auth/AuthApp
-        // give them bootstrap.js
+        "./AuthApp": "./src/bootstrap", // When someone asks for @auth/AuthApp give them bootstrap.js
       },
       shared: packageJson.dependencies,
     }),
