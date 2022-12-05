@@ -2,8 +2,8 @@ import { createGenerateClassName, StylesProvider } from "@material-ui/styles";
 import React from "react";
 import { Route, Router, Switch } from "react-router-dom";
 
-import SignIn from "./components/SignIn";
-import SignUp from "./components/Signup";
+import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 
 const generateClassName = createGenerateClassName({
   productionPrefix: "au",
@@ -17,10 +17,10 @@ export default ({ history, onSignIn }) => {
         <Router history={history}>
           <Switch>
             <Route path='/auth/signin'>
-              <SignIn onSignIn={onSignIn} />
+              <Signin onSignIn={onSignIn} />
             </Route>
             <Route path='/auth/signup'>
-              <SignUp onSignIn={onSignIn} />
+              <Signup onSignIn={onSignIn} />
             </Route>
           </Switch>
         </Router>
