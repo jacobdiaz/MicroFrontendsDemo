@@ -1,6 +1,6 @@
-import { mount } from "auth/AuthApp";
-import React, { useRef, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import {mount} from "auth/AuthApp";
+import React, {useEffect, useRef} from "react";
+import {useHistory} from "react-router-dom";
 
 export const AuthApp = () => {
   const ref = useRef(null);
